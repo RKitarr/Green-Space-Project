@@ -39,6 +39,8 @@ CREATE TABLE Event (
     FOREIGN KEY (GreenspaceID) REFERENCES Greenspace(GreenspaceID)
 );
 
+INSERT INTO Event (name, GreenspaceID, event_date, attendance_count, total_attendees)
+VALUES ('Music Festival', 1, '2024-12-01', 500, 1000);
 
 CREATE TABLE User (
     UserID INT AUTO_INCREMENT PRIMARY KEY,
