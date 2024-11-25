@@ -10,6 +10,10 @@ CREATE TABLE Location (
 );
 
 
+INSERT INTO Location (city, neighbourhood, coordinates, population_density, address)
+VALUES ('Nairobi', 'Westlands', '1.29027° S, 36.8219° E', 5000, 'Parklands Road');
+ 
+
 CREATE TABLE Greenspace (
     GreenspaceID INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
