@@ -86,3 +86,7 @@ CREATE TABLE Facility (
     facilityType VARCHAR(100),
     FOREIGN KEY (GreenspaceID) REFERENCES Greenspace(GreenspaceID)
 );
+
+SELECT name, total_attendees
+FROM Event
+WHERE total_attendees > (SELECT AVG(total_attendees) FROM Event);
