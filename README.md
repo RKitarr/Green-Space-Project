@@ -87,6 +87,3 @@ CREATE TABLE Facility (
     FOREIGN KEY (GreenspaceID) REFERENCES Greenspace(GreenspaceID)
 );
 
-SELECT name, total_attendees
-FROM Event
-WHERE total_attendees > (SELECT AVG(total_attendees) FROM Event);
