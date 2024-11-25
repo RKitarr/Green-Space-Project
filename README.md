@@ -22,6 +22,8 @@ CREATE TABLE Greenspace (
     FOREIGN KEY (LocationID) REFERENCES Location(LocationID)
 );
 
+INSERT INTO Greenspace (name, type, area, LocationID, status, created_date, age)
+VALUES ('Uhuru Park', 'Urban Park', 12.5, 1, 'Active', '2020-01-01', 4);
 
 CREATE TABLE Event (
     EventID INT AUTO_INCREMENT PRIMARY KEY,
