@@ -144,3 +144,6 @@ FROM Maintenance m
 JOIN Greenspace g ON m.GreenspaceID = g.GreenspaceID
 GROUP BY g.name;
 
+SELECT name, total_attendees
+FROM Event
+WHERE total_attendees > (SELECT AVG(total_attendees) FROM Event);
