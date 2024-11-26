@@ -94,4 +94,5 @@ CREATE TABLE Facility (
     facilityType VARCHAR(100),
     FOREIGN KEY (GreenspaceID) REFERENCES Greenspace(GreenspaceID)
 );
-
+INSERT INTO Facility (GreenspaceID, facilityType)
+VALUES (1, 'Playground');
