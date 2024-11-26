@@ -116,3 +116,6 @@ WHERE e.GreenspaceID = 1;
 SELECT ua.description, u.fullName, ua.activity_date, ua.duration
 FROM UserActivity ua
 JOIN User u ON ua.UserID = u.UserID;
+UPDATE Maintenance
+SET cost = 2000
+WHERE MaintenanceID = 1;
