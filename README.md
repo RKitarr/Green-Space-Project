@@ -1,4 +1,4 @@
-# Green-Space-Project
+![image](https://github.com/user-attachments/assets/9cfa410f-4502-4e9d-b478-3985ed44d446)![image](https://github.com/user-attachments/assets/16ceeb79-a51a-4aa7-937a-2a80d1e6199e)# Green-Space-Project
 
 CREATE TABLE Location (
     LocationID INT AUTO_INCREMENT PRIMARY KEY,
@@ -12,6 +12,7 @@ CREATE TABLE Location (
 
 INSERT INTO Location (city, neighbourhood, coordinates, population_density, address)
 VALUES ('Nairobi', 'Westlands', '1.29027° S, 36.8219° E', 5000, 'Parklands Road');
+
  
 
 CREATE TABLE Greenspace (
@@ -98,4 +99,8 @@ CREATE TABLE Facility (
 );
 
 INSERT INTO Facility (GreenspaceID, facilityType)
-VALUES (1, 'Playground');
+VALUES (1, 'Playground'
+
+SELECT g.name AS GreenspaceName, l.city, l.neighbourhood, g.type, g.area
+FROM Greenspace g
+JOIN Location l ON g.LocationID = l.LocationID;
