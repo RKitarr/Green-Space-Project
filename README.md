@@ -117,24 +117,6 @@ SELECT ua.description, u.fullName, ua.activity_date, ua.duration
 FROM UserActivity ua
 JOIN User u ON ua.UserID = u.UserID;
 
-UPDATE Maintenance
-SET cost = 2000
-WHERE MaintenanceID = 1;
-
-UPDATE User
-SET feedback = 'Excellent maintenance and clean environment!'
-WHERE UserID = 1;
-
-SELECT e.name AS EventName, g.name AS GreenspaceName, e.total_attendees
-FROM Event e
-JOIN Greenspace g ON e.GreenspaceID = g.GreenspaceID;
-
-DELETE FROM Event
-WHERE EventID = 1;
-
-DELETE FROM Facility
-WHERE FacilityID = 1;
-
 SELECT e.name AS EventName, g.name AS GreenspaceName, e.total_attendees
 FROM Event e
 JOIN Greenspace g ON e.GreenspaceID = g.GreenspaceID;
