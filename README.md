@@ -52,6 +52,8 @@ CREATE TABLE User (
     feedback TEXT
 );
 
+INSERT INTO User (gender, city, visit_frequency, fullName, contact_no, feedback)
+VALUES ('Male', 'Nairobi', 'Weekly', 'John Doe', '0712345678', 'Great experience!');
 
 CREATE TABLE Maintenance (
     MaintenanceID INT AUTO_INCREMENT PRIMARY KEY,
@@ -94,5 +96,6 @@ CREATE TABLE Facility (
     facilityType VARCHAR(100),
     FOREIGN KEY (GreenspaceID) REFERENCES Greenspace(GreenspaceID)
 );
+
 INSERT INTO Facility (GreenspaceID, facilityType)
 VALUES (1, 'Playground');
