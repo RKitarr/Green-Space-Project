@@ -125,6 +125,10 @@ UPDATE User
 SET feedback = 'Excellent maintenance and clean environment!'
 WHERE UserID = 1;
 
+SELECT e.name AS EventName, g.name AS GreenspaceName, e.total_attendees
+FROM Event e
+JOIN Greenspace g ON e.GreenspaceID = g.GreenspaceID;
+
 DELETE FROM Event
 WHERE EventID = 1;
 
