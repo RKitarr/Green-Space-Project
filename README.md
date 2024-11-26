@@ -138,3 +138,9 @@ WHERE FacilityID = 1;
 SELECT e.name AS EventName, g.name AS GreenspaceName, e.total_attendees
 FROM Event e
 JOIN Greenspace g ON e.GreenspaceID = g.GreenspaceID;
+
+SELECT g.name AS GreenspaceName, SUM(m.cost) AS TotalMaintenanceCost
+FROM Maintenance m
+JOIN Greenspace g ON m.GreenspaceID = g.GreenspaceID
+GROUP BY g.name;
+
