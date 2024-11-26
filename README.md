@@ -122,3 +122,5 @@ WHERE MaintenanceID = 1;
 UPDATE User
 SET feedback = 'Excellent maintenance and clean environment!'
 WHERE UserID = 1;
+DELETE FROM Event
+WHERE EventID = 1;
