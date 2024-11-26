@@ -104,3 +104,12 @@ VALUES (1, 'Playground'
 SELECT g.name AS GreenspaceName, l.city, l.neighbourhood, g.type, g.area
 FROM Greenspace g
 JOIN Location l ON g.LocationID = l.LocationID;
+
+SELECT g.name AS GreenspaceName, SUM(m.cost) AS TotalMaintenanceCost
+FROM Maintenance m
+JOIN Greenspace g ON m.GreenspaceID = g.GreenspaceID
+GROUP BY g.name;
+
+SELECT e.name AS EventName, e.event_date, e.attendance_count
+FROM Event e
+WHERE e.GreenspaceID = 1;
