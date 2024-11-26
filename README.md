@@ -113,3 +113,6 @@ GROUP BY g.name;
 SELECT e.name AS EventName, e.event_date, e.attendance_count
 FROM Event e
 WHERE e.GreenspaceID = 1;
+SELECT ua.description, u.fullName, ua.activity_date, ua.duration
+FROM UserActivity ua
+JOIN User u ON ua.UserID = u.UserID;
