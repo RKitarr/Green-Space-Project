@@ -134,6 +134,7 @@ WHERE EventID = 1;
 
 DELETE FROM Facility
 WHERE FacilityID = 1;
+
 SELECT e.name AS EventName, g.name AS GreenspaceName, e.total_attendees
 FROM Event e
 JOIN Greenspace g ON e.GreenspaceID = g.GreenspaceID;
