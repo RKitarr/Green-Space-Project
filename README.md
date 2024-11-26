@@ -130,8 +130,13 @@ UPDATE Maintenance
 SET cost = 2000
 WHERE MaintenanceID = 1;
 
-SELECT g.name AS GreenspaceName, SUM(m.cost) AS TotalMaintenanceCost
-FROM Maintenance m
-JOIN Greenspace g ON m.GreenspaceID = g.GreenspaceID
-GROUP BY g.name;
+UPDATE User
+SET feedback = 'Excellent maintenance and clean environment!'
+WHERE UserID = 1;
+
+DELETE FROM Event
+WHERE EventID = 1;
+
+
+
 
