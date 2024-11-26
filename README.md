@@ -65,7 +65,8 @@ CREATE TABLE Maintenance (
     performed_by VARCHAR(100),
     FOREIGN KEY (GreenspaceID) REFERENCES Greenspace(GreenspaceID)
 );
-
+INSERT INTO Maintenance (GreenspaceID, maintenance_date, type, cost, performed_by)
+VALUES (1, '2024-10-01', 'Lawn Mowing', 1500, 'ABC Landscaping Ltd');
 
 CREATE TABLE EnvironmentalImpact (
     ImpactID INT AUTO_INCREMENT PRIMARY KEY,
@@ -129,3 +130,13 @@ GROUP BY g.name;
 SELECT name, total_attendees
 FROM Event
 WHERE total_attendees > (SELECT AVG(total_attendees) FROM Event);
+
+UPDATE Maintenance
+SET cost = 2000
+WHERE MaintenanceID = 1;
+
+SELECT g.name AS GreenspaceName, SUM(m.cost) AS TotalMaintenanceCost
+FROM Maintenance m
+JOIN Greenspace g ON m.GreenspaceID = g.GreenspaceID
+GROUP BY g.name;
+
