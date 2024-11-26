@@ -119,3 +119,6 @@ JOIN User u ON ua.UserID = u.UserID;
 UPDATE Maintenance
 SET cost = 2000
 WHERE MaintenanceID = 1;
+UPDATE User
+SET feedback = 'Excellent maintenance and clean environment!'
+WHERE UserID = 1;
